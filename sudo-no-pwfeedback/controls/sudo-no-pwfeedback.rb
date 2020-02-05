@@ -9,9 +9,9 @@ control 'sudo-v-ok' do
   title 'Check sudo -V output'
   desc 'Run sudo -V and check stdout'
   describe command('sudo -V') do
-    its('stdout') { should_not eq 'feedback' }
+    its('stdout') { should_not match /feedback/ }
     # The below ensures we're getting the full output from running as root
-    its('stdout') { should eq 'Sudoers path: ' }
+    its('stdout') { should match /Sudoers path: / }
     its('stderr') { should eq '' }
     its('exit_status') { should eq 0 }
   end
