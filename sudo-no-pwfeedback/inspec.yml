@@ -1,0 +1,10 @@
+name: sudo-no-pwfeedback
+title: Check that pwfeedback is disabled by default
+maintainer: Steve Bonds
+copyright: Steve Bonds
+copyright_email: sbonds@gmail.com
+license: GPLv3
+summary: Check that sudo has pwfeedback disabled
+version: 0.1.0
+supports:
+  platform: unix
